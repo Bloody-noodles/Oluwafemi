@@ -10,6 +10,16 @@ import tramplerImage from "../images/trampler.png";
 
 const featured = [
   {
+    title: "Amala Spot",
+    tags: "Next.js, TypeScript, Tailwind CSS, Supabase, Gemini",
+    desc: "A premium Nigerian food discovery and ordering concept, bringing Yoruba food culture into a polished digital experience with editorial storytelling, menu exploration, and a demonstration ordering flow.",
+    highlights: ["Responsive Nigerian food website and editorial landing page", "Food categories, menu discovery, and demo basket experience", "Gemini-powered conversational ordering assistant in the product vision"],
+    img: "https://image.thum.io/get/width/1200/crop/900/https://amala-spot-site.vercel.app/",
+    link: "https://amala-spot-site.vercel.app/",
+    repo: "https://github.com/Bloody-noodles/amala-spot",
+    year: "2026",
+  },
+  {
     title: "Dee-Faith Pride Multi-Biz",
     tags: "Astro, TypeScript, Tailwind CSS, Supabase",
     desc: "A mobile-friendly digital-services storefront for a Nigerian business, bringing everyday requests into one place with service discovery, provider references, and WhatsApp-led enquiries.",
@@ -92,10 +102,13 @@ const more = [
                 {p.highlights.map((highlight) => <li class="flex gap-2"><span class="text-tang" aria-hidden="true">✳</span>{highlight}</li>)}
               </ul>
             </details>
-            <a href={p.link} target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold border-b-2 border-tang pb-1">
-              View live site
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </a>
+            <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <a href={p.link} target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold border-b-2 border-tang pb-1">
+                View live site
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </a>
+              {p.repo && <a href={p.repo} target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold text-ink/65 hover:text-tang transition-colors">View source code ↗</a>}
+            </div>
           </div>
         </article>
       ))}
